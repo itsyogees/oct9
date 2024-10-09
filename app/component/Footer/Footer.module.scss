@@ -1,0 +1,100 @@
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8; // Light background color for footer
+
+  h3 {
+    font-size: 24px; // Increased font size for headings
+    color: rgb(8, 8, 54);
+    margin-bottom: 15px; // Spacing below headings
+  }
+
+  p {
+    font-size: 18px; // Adjusted font size for paragraphs
+    padding: 5px 0; // Padding for top and bottom
+    color: #555; // Darker gray for better readability
+  }
+
+  h4 {
+    font-size: 20px; // Increased font size for contact numbers
+    color: rgb(8, 8, 54);
+    padding: 10px 0; // Spacing for contact number
+  }
+
+  .footerLogo {
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 20px; // Spacing below the logo
+    @media screen and (max-width: 850px) {
+      justify-content: center;
+    }
+  }
+
+  .footerIcons {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+
+    svg {
+      color: white;
+      font-size: 30px; // Adjusted icon size for balance
+      background-color: rgb(60, 60, 60);
+      border-radius: 50%;
+      padding: 10px;
+      transition: transform 0.3s; // Smooth scaling effect
+      &:hover {
+        transform: scale(1.1); // Scale effect on hover
+      }
+    }
+  }
+
+  // Mobile
+  @media (max-width: 599px) {
+    .contactDetails,
+    .aboutDetail,
+    .categoriesDetail,
+    .supportDetail {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+
+      p {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .footerIcons {
+      justify-content: center;
+    }
+  }
+
+  // iPad
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .contactDetails,
+    .aboutDetail,
+    .categoriesDetail,
+    .supportDetail {
+      width: 45%;
+      padding: 20px;
+    }
+  }
+
+  // Laptop
+  @media (min-width: 1024px) {
+    .contactDetails {
+      width: 30%;
+      margin-left: 2%;
+    }
+
+    .aboutDetail,
+    .categoriesDetail,
+    .supportDetail {
+      width: 15%;
+      margin-left: 5%;
+    }
+  }
+}
